@@ -1,0 +1,12 @@
+FUNCIONES DESCARTADAS
+individuales :: [Posicion] -> [[Posicion]] 
+individuales n | n == [] = [] 
+               | otherwise = [head n]:(individuales(tail n))
+
+
+
+agregar :: [Posicion] -> [[Posicion]] -> [[Posicion]]
+agregar x n |(n==[])=[x]
+            |otherwise = (x++(head n)):agregar x (tail n) 
+
+
